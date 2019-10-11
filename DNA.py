@@ -63,7 +63,7 @@ def main_speed_up(arr, length):
                 if endArrSize: #true when is not last element
                     speed_up_dict[i]=([index,endArrSize],index)
                 else: #is last element
-                    speed_up_dict[i]=([],index)
+                    speed_up_dict[i]=([index],index)
             else: #if is first element
                 speed_up_dict[i]=([endArrSize],index)
         elif speed_up_dict[i][1]<index-1:
@@ -127,7 +127,7 @@ def divide_conquer2(arr, index, length):
                 if endArrSize: #true when is not last element
                     conquer_dict2[arr[0]]=([index,endArrSize],index)
                 else: #is last element
-                    conquer_dict2[arr[0]]=([],index)
+                    conquer_dict2[arr[0]]=([index],index)
             else: #if is first element
                 conquer_dict2[arr[0]]=([endArrSize],index)
         elif conquer_dict2[arr[0]][1]<index-1:
@@ -180,7 +180,7 @@ def input_for_divide():
     last_time = time.time()
     divide_conquer2(arr, 0, len(arr))
     print('Second conquer took      {} seconds'.format(time.time()-last_time))
-    
+
     last_time = time.time()
 #-----------------------------------------------------------    
 input_for_divide()
